@@ -1,0 +1,64 @@
+Algoritmo BeepTest
+
+    Definir nombre como caracter
+    Definir edad, participante, nivel, shuttle como entero 
+    Definir V, VO2_Simple, VO2_leger Como Real
+
+    participante <- 1
+
+    Mientras participante <= 10 Hacer
+        Escribir "Participante: ", participante
+
+        Escribir "¿Cuál es su nombre?"
+        Leer nombre 
+
+        Escribir "¿Cuál es la edad?" 
+        Leer edad 
+        Mientras edad <= 0 Hacer 
+            Escribir "Por favor ingrese una edad mayor a 0"
+            Leer edad
+        FinMientras
+
+        Escribir "¿Cuál fue el nivel alcanzado?"
+        Leer nivel 
+        Mientras nivel < 1 Hacer 
+            Escribir "Por favor ingrese un valor mayor o igual que 1"
+            Leer nivel
+        FinMientras
+
+        Escribir "¿Cuál es el shuttle?" 
+        Leer shuttle
+        Mientras shuttle < 0 Hacer
+            Escribir "por favor ingrese un valor mayor o igual que 0"
+            Leer shuttle
+        FinMientras 
+
+        V <- 8 + 0.5 * nivel
+
+        VO2_Simple <- 3.46 * V + 12.2
+
+        VO2_leger <- 31.025 + (3.238 * V) - (3.248 * edad) + (0.1536 * V * edad)
+
+
+        Escribir "------------------------------"
+        Escribir "participante ", participante, ": ", nombre
+        Escribir "Edad: ", edad, " años"
+        Escribir "Nivel alcanzado: ", nivel
+        Escribir "Shuttle: ", shuttle
+        Escribir "Velocidad final: ", V, " Km/h"
+        Escribir "VO2_Máx_Simple: ",  VO2_Simple
+        Escribir "VO2_Máx_leger: ", VO2_leger  
+        Escribir "------------------------------"
+
+        participante <- participante + 1
+
+    FinMientras
+
+    
+
+
+
+
+FinAlgoritmo
+
+
