@@ -39,13 +39,20 @@ Algoritmo BeepTest
         FinMientras 
 
         V <- 8 + 0.5 * nivel
+            /// El test empieza en 8km/h y aumenta 0.5 por cada nivel
 
         VO2_Simple <- 3.46 * V + 12.2
         promSimple <- promSimple + VO2_Simple
+            /// 3.46: aumento del VO₂ por cada 1 km/h
+            /// 12.2: valor base del VO₂
 
         VO2_leger <- 31.025 + (3.238 * V) - (3.248 * edad) + (0.1536 * V * edad)
         promLeger <- promLeger + VO2_leger
-
+            ///31.025: base del modelo
+            ///3.238: VO₂ sube con velocidad
+            //-3.248: VO₂ baja con la edad
+            //0.1536: efecto combinado de edad y velocidad
+            
         si VO2_Simple  >= 55 Entonces
 		clasificacion <- "Excelente"
         SiNo
