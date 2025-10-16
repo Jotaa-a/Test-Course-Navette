@@ -39,6 +39,22 @@ Algoritmo BeepTest
 
         VO2_leger <- 31.025 + (3.238 * V) - (3.248 * edad) + (0.1536 * V * edad)
 
+        		si VO2_Simple  >= 55 Entonces
+			clasificacion = "Excelente"
+		SiNo
+			si VO2_Simple >=45 Entonces
+				clasificacion = "Buena"
+			SiNo
+				si VO2_Simple >=35 Entonces
+					clasificacion = "Promedio"
+				SiNo
+					si  VO2_Simple <35 Entonces
+						clasificacion = "Baja"
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+
 
         Escribir "------------------------------"
         Escribir "participante ", participante, ": ", nombre
@@ -48,17 +64,12 @@ Algoritmo BeepTest
         Escribir "Velocidad final: ", V, " Km/h"
         Escribir "VO2_Máx_Simple: ",  VO2_Simple
         Escribir "VO2_Máx_leger: ", VO2_leger  
+        Escribir "Clasificacion: ", clasificacion
         Escribir "------------------------------"
 
         participante <- participante + 1
 
     FinMientras
-
-    
-
-
-
-
 FinAlgoritmo
 
 
