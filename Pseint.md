@@ -46,7 +46,6 @@ Algoritmo BeepTest
         VO2_leger <- 31.025 + (3.238 * V) - (3.248 * edad) + (0.1536 * V * edad)
         promLeger <- promLeger + VO2_leger
 
-<<<<<<< HEAD
         si VO2_Simple  >= 55 Entonces
 		clasificacion = "Excelente"
         SiNo
@@ -62,25 +61,6 @@ Algoritmo BeepTest
                 FinSi
             FinSi
         FinSi
-=======
-        		si VO2_Simple  >= 55 Entonces
-			clasificacion = "Excelente"
-		SiNo
-			si VO2_Simple >=45 Entonces
-				clasificacion = "Buena"
-			SiNo
-				si VO2_Simple >=35 Entonces
-					clasificacion = "Promedio"
-				SiNo
-					si  VO2_Simple <35 Entonces
-						clasificacion = "Baja"
-					FinSi
-				FinSi
-			FinSi
-		FinSi
-
->>>>>>> b324bc5df86b6c17131914d2975f443bfdeec148
-
       
         Escribir "------------------------------"
         Escribir "participante ", participante, ": ", nombre
@@ -96,15 +76,11 @@ Algoritmo BeepTest
         participante <- participante + 1
 
     FinMientras
-<<<<<<< HEAD
 
     Escribir "Promedio grupal VO2 simple: ", (promSimple / totalParticipantes)
     Escribir "Promedio grupal VO2 Léger: ", (PromLeger / totalParticipantes)
 
 
-
-=======
->>>>>>> b324bc5df86b6c17131914d2975f443bfdeec148
 FinAlgoritmo
 
 
