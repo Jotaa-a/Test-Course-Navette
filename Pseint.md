@@ -1,18 +1,18 @@
 Algoritmo BeepTest
 
-    Definir nombre como caracter
+    Definir nombre, clasificacion como caracter
     Definir edad, participante, nivel, shuttle, totalParticipantes como entero 
     Definir V, VO2_Simple, VO2_leger, promSimple, promLeger Como Real
 
     participante <- 1
     promSimple <- 0
-    PromLeger <- 0
+    promLeger <- 0
     
     Escribir "¿Cuántos participantes hay?"
     Leer totalParticipantes
 
-    Mientras participante <= totalParticipantes Hacer
-        Escribir "Participante: ", participante
+    Para participante <- 1 Hasta totalParticipantes Hacer
+        Escribir "Participante ", participante, ": "
 
         Escribir "¿Cuál es su nombre?"
         Leer nombre 
@@ -47,22 +47,21 @@ Algoritmo BeepTest
         promLeger <- promLeger + VO2_leger
 
         si VO2_Simple  >= 55 Entonces
-		clasificacion = "Excelente"
+		clasificacion <- "Excelente"
         SiNo
             si VO2_Simple >=45 Entonces
-                clasificacion = "Buena"
+                clasificacion <- "Buena"
             SiNo
                 si VO2_Simple >=35 Entonces
                     clasificacion = "Promedio"
                 SiNo
-                    si  VO2_Simple <35 Entonces
-                        clasificacion = "Baja"
-                    FinSi
+                    clasificacion = "Baja"                   
                 FinSi
             FinSi
         FinSi
       
-        Escribir "------------------------------"
+        Escribir "                              "
+        Escribir "=============================="
         Escribir "participante ", participante, ": ", nombre
         Escribir "Edad: ", edad, " años"
         Escribir "Nivel alcanzado: ", nivel
@@ -71,14 +70,14 @@ Algoritmo BeepTest
         Escribir "VO2_Máx_Simple: ",  VO2_Simple
         Escribir "VO2_Máx_leger: ", VO2_leger  
         Escribir "Clasificacion: ", clasificacion
-        Escribir "------------------------------"
+        Escribir "=============================="
+        Escribir "                              "
 
-        participante <- participante + 1
-
-    FinMientras
+        
+    FinPara
 
     Escribir "Promedio grupal VO2 simple: ", (promSimple / totalParticipantes)
-    Escribir "Promedio grupal VO2 Léger: ", (PromLeger / totalParticipantes)
+    Escribir "Promedio grupal VO2 Léger: ", (promLeger / totalParticipantes)
 
 
 FinAlgoritmo
