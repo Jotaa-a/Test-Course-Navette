@@ -1,15 +1,19 @@
 Algoritmo BeepTest
 
-    Definir nombre, clasificacion como caracter
+    Definir nombre, clasificacion como cadena
     Definir edad, participante, nivel, shuttle, totalParticipantes como entero 
     Definir V, VO2_Simple, VO2_leger, promSimple, promLeger Como Real
 
-    participante <- 1
     promSimple <- 0
     promLeger <- 0
     
     Escribir "¿Cuántos participantes hay?"
     Leer totalParticipantes
+
+    Mientras totalParticipantes < 1 Hacer
+        Escribir "Ingrese un número valido mayor o igual que 1"
+        Leer totalParticipantes
+    FinMientras
 
     Para participante <- 1 Hasta totalParticipantes Hacer
         Escribir "Participante ", participante, ": "
@@ -34,7 +38,7 @@ Algoritmo BeepTest
         Escribir "¿Cuál es el shuttle?" 
         Leer shuttle
         Mientras shuttle < 0 Hacer
-            Escribir "por favor ingrese un valor mayor o igual que 0"
+            Escribir "por favor ingrese un valor mayor o igual que 0"uien creo github
             Leer shuttle
         FinMientras 
 
@@ -56,13 +60,13 @@ Algoritmo BeepTest
         si VO2_Simple  >= 55 Entonces
 		clasificacion <- "Excelente"
         SiNo
-            si VO2_Simple >=45 Entonces
+            si VO2_Simple >= 45 Entonces
                 clasificacion <- "Buena"
             SiNo
-                si VO2_Simple >=35 Entonces
-                    clasificacion = "Promedio"
+                si VO2_Simple >= 35 Entonces
+                    clasificacion <- "Promedio"
                 SiNo
-                    clasificacion = "Baja"                   
+                    clasificacion <- "Baja"                   
                 FinSi
             FinSi
         FinSi
@@ -76,7 +80,7 @@ Algoritmo BeepTest
         Escribir "Velocidad final: ", V, " Km/h"
         Escribir "VO2_Máx_Simple: ",  VO2_Simple
         Escribir "VO2_Máx_leger: ", VO2_leger  
-        Escribir "Clasificacion: ", clasificacion
+        Escribir "Clasificación: ", clasificacion
         Escribir "=============================="
         Escribir "                              "
 
