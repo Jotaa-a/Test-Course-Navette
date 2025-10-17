@@ -1,6 +1,6 @@
 Algoritmo BeepTest
 
-    Definir nombre como caracter
+    Definir nombre como cadena
     Definir edad, participante, nivel, shuttle, totalParticipantes como entero 
     Definir V, VO2_Simple, VO2_leger, promSimple, promLeger Como Real
 
@@ -10,6 +10,12 @@ Algoritmo BeepTest
     
     Escribir "¿Cuántos participantes hay?"
     Leer totalParticipantes
+
+    Mientras totalParticipantes < 1 Hacer
+        Escribir "Ingrese un número valido mayor o igual que 1"
+        Leer totalParticipantes
+    FinMientras
+    
 
     Mientras participante <= totalParticipantes Hacer
         Escribir "Participante: ", participante
@@ -47,16 +53,16 @@ Algoritmo BeepTest
         promLeger <- promLeger + VO2_leger
 
         si VO2_Simple  >= 55 Entonces
-		clasificacion = "Excelente"
+		clasificacion <- "Excelente"
         SiNo
             si VO2_Simple >=45 Entonces
-                clasificacion = "Buena"
+                clasificacion <- "Buena"
             SiNo
                 si VO2_Simple >=35 Entonces
-                    clasificacion = "Promedio"
+                    clasificacion <- "Promedio"
                 SiNo
                     si  VO2_Simple <35 Entonces
-                        clasificacion = "Baja"
+                        clasificacion <- "Baja"
                     FinSi
                 FinSi
             FinSi
